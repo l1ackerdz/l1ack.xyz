@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Param Reflect in HTML Source</title>
+</head>
+<body>
+  <h1>Check the source (Ctrl+U)</h1>
+  <p>This page reflects param values into the HTML source directly.</p>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const paramNames = ['query', 'docs', 'user', 'id', 'type'];
+
+      document.write('<!--\n');
+      paramNames.forEach(name => {
+        const value = params.get(name);
+        if (value !== null) {
+          document.write(`${name} = ${value}\n`);
+        }
+      });
+      document.write('-->');
+    })();
+  </script>
+</body>
+</html>
