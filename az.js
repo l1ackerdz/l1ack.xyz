@@ -45,3 +45,4 @@ nikmolkTOKEN = "2UXRfTfvQ-lkj3NdppDJ9t-oH8CLRXzriS58HAMheIA"
 "qahbaTOKENdzdz" = "2UXRfTfvQ-lkj3NdppDJ9t-oH8CLRXzriS58HAMheIA"
 
 "JSK_TOKEN_dz" = "2UXRfTfvQ-lkj3Nlkj3NdppDJ9t\qdsfdsf+dsfd"
+https://identitytoolkit.googleapis.com/v1/projects?QQQQQQ_JSK_TOKEN_dz=AIzaSyAzQ0viyUgdzmByhOsTo170OeffeefAHekJbetLM
