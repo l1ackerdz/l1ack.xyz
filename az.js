@@ -34,3 +34,10 @@ Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXBsb3ltZW50SWQiOiJkcGxfM0NNWDNN
 zebiENT_TOKEN:"2UXRfTfvQ-lkj3NdppDJ9t-oH8CLRXzriS58HAMheIA"
 
 "fzeTOKEN_dgf":"2UXRfTfvQ-lkj3NdppDJ9t-oH8CLRXzriS58HAMheIA"
+
+
+"nikk_TOKEN":"2UXRfTfvQ-lkj3NdppDJ9t-oH8CLRXzriS58HAMheIA"
+
+nikmolkTOKEN = "2UXRfTfvQ-lkj3NdppDJ9t-oH8CLRXzriS58HAMheIA"
+
+"fzeTOKEN_dgf" = "2UXRfTfvQ-lkj3NdppDJ9t-oH8CLRXzriS58HAMheIA"
