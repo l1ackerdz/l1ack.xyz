@@ -11162,7 +11162,6 @@ methods
 metka
 metki
 metlife
-metrics
 metriweb
 metro
 metso
