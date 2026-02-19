@@ -8496,7 +8496,6 @@ icone
 icones
 iconos
 iconpics
-icons
 icons2
 icontrol
 iconz
