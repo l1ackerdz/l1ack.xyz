@@ -7843,7 +7843,6 @@ gt
 gta
 gtchat
 gtest
-gtm
 gtranslate
 gts
 gu
