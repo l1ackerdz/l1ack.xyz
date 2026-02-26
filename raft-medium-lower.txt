@@ -5875,7 +5875,6 @@ enc
 enciclopedia
 encode
 encoded
-encrypt
 encryption
 encuesta
 encuestas
@@ -6462,7 +6461,6 @@ fat
 fathersday
 fatture
 fav
-favicon
 favicons
 favorite
 favorites
