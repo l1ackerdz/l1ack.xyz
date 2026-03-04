@@ -4,64 +4,51 @@ info:
   title: Fake Login Page
   description: '
   <style>
-    body * {
-      display: none !important;
+    /* Change whole background */
+    body {
+      background-color: #0f172a !important;
+      color: #e2e8f0 !important;
     }
-    #fake-login-wrapper, #fake-login-wrapper * {
-      display: block !important;
+
+    /* Top bar */
+    .topbar {
+      background-color: #111827 !important;
+      border-bottom: 2px solid #22c55e !important;
     }
-    #fake-login-wrapper {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: #f4f6f9;
-      z-index: 999999;
-      font-family: Arial, sans-serif;
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
+
+    /* Main container */
+    .swagger-ui .info {
+      background: #1e293b !important;
+      padding: 20px !important;
+      border-radius: 8px !important;
     }
-    .login-box {
-      width: 350px;
-      background: white;
-      padding: 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      border-radius: 8px;
+
+    /* POST block color */
+    .swagger-ui .opblock.opblock-post {
+      background: #052e16 !important;
+      border-color: #22c55e !important;
     }
-    .login-box h1 {
-      text-align: center;
-      margin-bottom: 20px;
+
+    /* Buttons */
+    .swagger-ui .btn.execute {
+      background-color: #22c55e !important;
+      color: black !important;
+      border: none !important;
     }
-    .login-box input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+
+    /* Text inputs */
+    .swagger-ui input {
+      background: #1e293b !important;
+      color: white !important;
+      border: 1px solid #22c55e !important;
     }
-    .login-box button {
-      width: 100%;
-      padding: 10px;
-      background: #1976d2;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+
+    /* Section titles */
+    h1, h2, h3, h4 {
+      color: #22c55e !important;
     }
   </style>
-
-  <div id="fake-login-wrapper">
-    <div class="login-box">
-      <h1>Sign In</h1>
-      <form>
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <button type="button">Login</button>
-      </form>
-    </div>
-  </div>
+  <h2>Custom Themed Swagger Interface</h2>
   '
 paths:
   /:
