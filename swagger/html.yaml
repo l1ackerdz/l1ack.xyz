@@ -1,58 +1,11 @@
 swagger: '2.0'
 info:
   version: 1.0.0
-  title: Fake Login Page
-  description: '
-  <style>
-    /* Change whole background */
-    body {
-      background-color: #0f172a !important;
-      color: #e2e8f0 !important;
-    }
-
-    /* Top bar */
-    .topbar {
-      background-color: #111827 !important;
-      border-bottom: 2px solid #22c55e !important;
-    }
-
-    /* Main container */
-    .swagger-ui .info {
-      background: #1e293b !important;
-      padding: 20px !important;
-      border-radius: 8px !important;
-    }
-
-    /* POST block color */
-    .swagger-ui .opblock.opblock-post {
-      background: #052e16 !important;
-      border-color: #22c55e !important;
-    }
-
-    /* Buttons */
-    .swagger-ui .btn.execute {
-      background-color: #22c55e !important;
-      color: black !important;
-      border: none !important;
-    }
-
-    /* Text inputs */
-    .swagger-ui input {
-      background: #1e293b !important;
-      color: white !important;
-      border: 1px solid #22c55e !important;
-    }
-
-    /* Section titles */
-    h1, h2, h3, h4 {
-      color: #22c55e !important;
-    }
-  </style>
-  <h2>Custom Themed Swagger Interface</h2>
-  '
+  title: Image Only
+  description: '<img src="https://s48646.pcdn.co/wp-content/uploads/2023/06/computer-popup-box-screen-warning-of-a-system-being-hacked-1.jpeg">'
 paths:
   /:
-    post:
+    get:
       responses:
         '200':
-          description: Login successful
+          description: OK
