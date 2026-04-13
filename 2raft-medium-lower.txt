@@ -104,7 +104,6 @@
 .flac
 .flowconfig
 .fontconfig/
-.fontcustom-manifest.json
 .forward
 .ftp
 .ftp-access
@@ -2703,7 +2702,6 @@ fastlane/report.xml
 fastlane/screenshots
 fastlane/test_output
 fault
-favicon.ico
 fcadmin
 fcgi-bin
 fcgi-bin/
@@ -2889,14 +2887,9 @@ happyaxis.jsp
 haproxy/
 hc_admin
 HEAD
-health
-health.json
-healthcheck.php
-healthz
 heapdump
 heapdump.json
 heip65_admin.nsf
-helloEJB
 HelloHTML.jsp
 HelloHTMLError.jsp
 helloKona
@@ -3477,7 +3470,6 @@ manager/status/all
 manager/VERSION
 MANIFEST
 MANIFEST.bak
-manifest.json
 MANIFEST.MF
 manifest.mf
 manifest.yml
@@ -4363,7 +4355,6 @@ public/hot
 public/storage
 public/system
 public_html
-public_html/robots.txt
 publicadminer.php
 publication_list.xml
 PublishScripts/
@@ -4485,8 +4476,6 @@ rgs/
 rgsclients/
 RLcQq
 rmsadmin
-robots.txt
-robots.txt.dist
 rootadmin
 RootCA.crt
 roundcube/index.php
@@ -27658,7 +27647,6 @@ actuator/dump
 actuator/env
 actuator/events
 actuator/exportRegisteredServices
-actuator/favicon.ico
 actuator/features
 actuator/flyway
 actuator/health
