@@ -692,9 +692,7 @@
 ;admin/
 ;json/
 ;login/
-@
-\..\..\..\..\..\..\..\..\..\etc\passwd
-_
+@_
 _.htpasswd
 __admin
 __cache/
@@ -1948,7 +1946,6 @@ CFIDE/Administrator/startstop.html
 cgi-admin
 cgi-bin
 cgi-bin/
-cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
 cgi-bin/a1stats/a1disp.cgi
 cgi-bin/awstats.pl
 cgi-bin/awstats/
@@ -2635,7 +2632,6 @@ etc/config.ini
 etc/database.xml
 etc/hosts
 etc/lib/pChart2/examples/imageMap/index.php
-etc/passwd
 etc/pkexec
 etcd-apiserver-client.key
 etcd-ca.crt
@@ -2650,7 +2646,6 @@ EWbutton_Community
 EWbutton_GuestBook
 Exadmin/
 examadmin
-examples/jsp/%252e%252e/%252e%252e/manager/html/
 examples/jsp/index.html
 examples/jsp/snp/snoop.jsp
 examples/websocket/index.xhtml
