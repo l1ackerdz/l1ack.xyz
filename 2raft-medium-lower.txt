@@ -4648,8 +4648,6 @@ sitecore/content/home.aspx
 sitecore/login
 sitecore/login/default.aspx
 sitemanager.xml
-sitemap.xml
-sitemap.xml.gz
 sites.ini
 sites.xml
 Sites/Knowledge/Membership/Inspired/ViewCode.asp
